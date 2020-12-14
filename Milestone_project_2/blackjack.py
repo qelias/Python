@@ -188,7 +188,11 @@ while True:
     dealer.current_sum=0
 
     #Players place their bet
-    player1.bet(player1_bank)
+    if player1_bank.balance==0:
+        print(f"{player1.name} no longer has funds and cannot play the game further !. Exiting game.")
+        break
+    else:
+        player1.bet(player1_bank)
 
     #Player receives two cards face up
     print("\n")
@@ -250,7 +254,7 @@ while True:
             print(f"Tie, {player1.name} gets his bet back")
             player1_bank.balance+=player1.current_bet
             player1.current_bet=0
-        elif player1.current_sum < dealer.current_sum < 21:
+        elif player1.current_sum < dealer.current_sum <= 21:
             print(f"Dealer WINS! {player1.name} loses {player1.current_bet} chips to the dealer")
 
         while dealer.current_sum<=player1.current_sum<=21:
@@ -268,7 +272,7 @@ while True:
                 print(f"Tie, {player1.name} gets his bet back")
                 player1_bank.balance+=player1.current_bet
                 player1.current_bet=0
-            elif player1.current_sum < dealer.current_sum < 21:
+            elif player1.current_sum < dealer.current_sum <= 21:
                 print(f"Dealer WINS! {player1.name} loses {player1.current_bet} to the dealer")
 
     if not replay():
