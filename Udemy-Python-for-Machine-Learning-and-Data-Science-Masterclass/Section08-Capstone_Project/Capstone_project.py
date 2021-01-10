@@ -20,5 +20,5 @@ if __name__=="__main__":
     print(all_sites)
     print(fandango)
 
-    sns.scatterplot(data=fandango,y='VOTES',x='RATING')
-    plt.show()
+    #sns.scatterplot(data=fandango,y='VOTES',x='RATING')
+    #plt.show()
