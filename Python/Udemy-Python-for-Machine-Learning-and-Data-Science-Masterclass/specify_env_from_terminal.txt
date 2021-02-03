@@ -1,3 +1,0 @@
-conda info --envs (to see which env is activaed and which are available)
-conda activate MLDS
-jupyter notebek (or code .)
