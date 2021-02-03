@@ -1,0 +1,3 @@
+pyinstaller mycode.py --onefile
+
+but with tkinter, a simple .exe wieghs >200 MB ! problem ! :( I deleted them
