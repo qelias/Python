@@ -1,0 +1,3 @@
+[submodule "Unit-Testing-Embedded-Software/awesomesauce"]
+	path = Unit-Testing-Embedded-Software/awesomesauce
+	url = https://bitbucket.org/mvandervoord/awesomesauce.git
