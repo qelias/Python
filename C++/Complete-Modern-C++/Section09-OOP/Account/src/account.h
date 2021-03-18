@@ -16,19 +16,19 @@ protected:
 
 public:
     Account(const std::string &name, float balance); // constructor
-    ~Account();                                      // destructor
+    virtual ~Account();                                      // destructor
 
     // Accessor member functions
 
     const std::string get_name() const;
     float get_balance() const;
     int get_account_number() const;
-    float get_interest_rate() const;
+    virtual float get_interest_rate() const;
 
     // Mutator member functions
 
-    void accumulate_interest();
-    void withdraw(float amount);
+    virtual void accumulate_interest();
+    virtual void withdraw(float amount);
     void deposit(float amount);
 };
 #endif

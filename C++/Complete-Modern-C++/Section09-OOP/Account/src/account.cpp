@@ -9,12 +9,13 @@ int Account::total_number_of_accounts = 1000;
 // Manager functions (constructor, destructor)
 Account::Account(const std::string &name,float balance)
 :name(name),balance(balance){
-
+    std::cout<<"Account()"<<std::endl;
     account_number=++total_number_of_accounts;
 
     }
 
 Account::~Account(){
+    std::cout<<"~Account()"<<std::endl;
     --total_number_of_accounts;
 }
 

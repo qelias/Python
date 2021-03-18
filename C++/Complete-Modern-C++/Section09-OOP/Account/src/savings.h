@@ -3,7 +3,7 @@
 
 #include "account.h"
 
-class Savings:public Account{
+class Savings final:public Account{
 
     private:
         float rate;
@@ -15,10 +15,10 @@ class Savings:public Account{
         ~Savings();
 
         // Accessor
-        float get_interest_rate()const;
+        float get_interest_rate()const override;
 
         // Mutator
-        void accumulate_interest();
+        void accumulate_interest() override;
 };
 
 #endif
