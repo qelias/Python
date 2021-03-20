@@ -45,10 +45,17 @@ void Account::accumulate_interest(){
 }
 
 void Account::withdraw(float amount){
-    if(amount < balance)
-        balance-= amount;
-    else
-        std::cout<<"Insufficient balance"<<std::endl;
+    try{
+        if(amount < balance)
+            balance-= amount;
+        else
+            throw std::out_of_range("Insufficient balance");
+            //std::cout<<"Insufficient balance"<<std::endl;
+    }
+    catch (std::exception &ex){
+
+        std::cout<<ex.what()<<std::endl;
+    }
 }
 
 void Account::deposit(float amount){

@@ -34,5 +34,8 @@ int main()
     const std::type_info &ti = typeid(i);
     std::cout<<ti.name()<<std::endl;
 */
+
+    Account acc("AAAA",50);
+    acc.withdraw(100);
     return 0;
 }
