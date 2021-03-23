@@ -4,11 +4,11 @@
 
 Checking::Checking(const std::string &name, float balance, float minbalance)
 :Account(name,balance),minimum_balance(minbalance){
-
+    std::cout<<"Checking()"<<std::endl;
 }
 
 Checking::~Checking(){
-
+    std::cout<<"~Checking()"<<std::endl;
 }
 
 void Checking::withdraw(float amount){

@@ -11,7 +11,7 @@ class Checking final:public Account{
         float minimum_balance;
 
     public:
-        using Account::Account;
+        //using Account::Account;
         Checking(const std::string &name, float balance, float minbalance);
         ~Checking();
 

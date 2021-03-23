@@ -18,7 +18,7 @@ CC=gcc
 CFLAGS=-I. -I$(PATHU) -DTEST
 
 #Path Definitions
-PATHU = ../unity/
+PATHU = ./unity/
 PATHS =
 PATHT =
 PATHB = build/
